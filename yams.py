@@ -35,13 +35,13 @@ class Yams:
         return False
 
     def is_full(self, dice_results):
-        counts = [dice_results.count(value) for value in set(dice_results)]
-        return sorted(counts) == [2, 3]
+        duplicates_count = [dice_results.count(value) for value in set(dice_results)]
+        return sorted(duplicates_count) == [2, 3]
 
     def is_grande_suite(self, dice_results):
-        sorted_dice = sorted(dice_results)
+        sorted_dice_results = sorted(dice_results)
 
-        return sorted_dice == [1, 2, 3, 4, 5] or sorted_dice == [2, 3, 4, 5, 6]
+        return sorted_dice_results == [1, 2, 3, 4, 5] or sorted_dice_results == [2, 3, 4, 5, 6]
 
 
     def is_yams(self, dice_results):
